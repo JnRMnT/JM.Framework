@@ -27,7 +27,7 @@ steps:
     solution: '**/*.sln'
     msbuildArchitecture: 'x64'
     configuration: 'Release'
-    msbuildArguments: /p:DeployOnBuild=true /p:PublishProfile="LocalDeploy"
+    msbuildArguments: /p:DeployOnBuild=true /p:PublishProfile="JM.Framework/Properties/PublishProfiles/LocalDeploy.pubxml"
   displayName: "Build and Publish Project"
 - task: CopyFiles@2
   inputs:
