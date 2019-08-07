@@ -9,6 +9,8 @@
     <RepositoryType>Git</RepositoryType>
     <PackageProjectUrl>https://github.com/JnRMnT/JM.Framework</PackageProjectUrl>
     <Description>A basic utility class library that is used in JnRMnT projects.</Description>
+    <Copyright>JnRMnT</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
