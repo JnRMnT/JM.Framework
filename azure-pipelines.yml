@@ -16,8 +16,28 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
+  displayName: "Install NuGet"
 
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-
+  displayName: "Restore NuGet Packages"
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.sln'
+    msbuildArchitecture: 'x64'
+    configuration: 'Release'
+    msbuildArguments: /p:DeployOnBuild=true /p:PublishProfile="LocalDeploy"
+  displayName: "Build and Publish Project"
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'JM.Framework/bin/Release/Package'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  displayName: "Copy Artifacts"
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+  displayName: "Publish Artifacts"
