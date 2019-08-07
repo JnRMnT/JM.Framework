@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>JnRMnT</Authors>
+    <Company>JnRMnT</Company>
+    <RepositoryUrl>https://github.com/JnRMnT/JM.Framework</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageProjectUrl>https://github.com/JnRMnT/JM.Framework</PackageProjectUrl>
+    <Description>A basic utility class library that is used in JnRMnT projects.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JM.Entities\JM.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
