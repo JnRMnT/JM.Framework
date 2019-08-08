@@ -34,7 +34,7 @@ steps:
     SourceFolder: ''
     Contents: '**/*.nupkg'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-  displayName: "Copy 1Artifacts"
+  displayName: "Copy Artifacts"
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
