@@ -31,7 +31,7 @@ steps:
   displayName: "Build and Publish Project"
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '/'
+    SourceFolder: 'JM.Framework/'
     Contents: '*.nupkg'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: "Copy Artifacts"
